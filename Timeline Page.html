@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <link rel="stylesheet" href="https://w2141045.usrs.ecs.westminster.ac.uk/style.css">
+    <link rel="icon" type="image/x-icon" href="Logo.png">
+    <title>Life Below Water</title>
+</head>
+<style>
+    :root {
+    --primary-blue: #0077b6;   /* Deep Ocean */
+    --secondary-teal: #00b4d8; /* Shallow Water */
+    --neutral-sand: #f8f9fa;   /* Beach Sand */
+    --dark-text: #023e8a;
+    --accent-coral: #ff7f50;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: var(--neutral-sand);
+    color: var(--dark-text);
+}
+
+/* Layout Containers */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+header{
+  background: var(--primary-blue);
+  border-bottom: var(--secondary-teal);
+}
+
+header .container{
+  background: var(--primary-blue);
+  color: white;
+  padding: 1rem 0;
+  border-bottom: var(--secondary-teal) 3px solid;
+}
+
+.headerflex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  overflow: visible;
+}
+
+/* Navigation Bar */
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Logo{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Links styled as Buttons */
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary-teal);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.active {
+    background-color: var(--dark-text) !important;
+    border: 2px solid white;
+}
+
+/* Main Content Area */
+main {
+    min-height: 70vh;
+    padding: 20px 0;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+  }
+
+  .moreButton{
+    padding: 30px;
+    width: 500px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-size: large;
+    
+}
+
+.moreButton:hover{
+
+    background-color: lightblue;
+
+
+
+}
+
+.EventInfo{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.Card2View .EventInfo{
+    display: block;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+
+.EventInfo li{
+    padding: 2px;
+    background-color: lightcyan;
+    list-style: none;
+    border-radius: 10px;
+    padding: 11px;
+}
+
+
+
+
+.Card2.hidden{
+  display: none;
+
+}
+
+.filters{
+  margin: auto;
+  
+  padding: 10px;
+  border-bottom: 2px solid lightblue;
+  
+
+}
+
+.filterButton{
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 1px solid grey;
+}
+
+.filterButton:hover{
+  background-color: lightblue;
+}
+
+.title{
+  text-align: center;
+}
+
+
+
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: -10px;
+    
+
+}
+
+.iconImage{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+}
+
+
+
+
+.milestoneImages{
+    margin: auto;
+    border-radius: 16px;
+    width: 520px;
+    height: 350px;
+}
+
+
+.Card2{
+
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 17px;
+    margin: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    max-width: 580px;
+    box-sizing: border-box;
+    
+}
+
+
+
+.Card2View{
+
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 20px;
+
+}
+
+.cardLeft{
+    width: 540px;
+    flex-shrink:0;
+}
+
+footer{
+  background-color:#0077b6;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: aliceblue;
+}
+</style>
+<body>
+    <header>
+        <div class=" headerflex">
+          <a href="https://w2145621.users.ecs.westminster.ac.uk/SDG%2014/Home%20Page/home_page"><img src="Logo.png" class="Logo" alt="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="https://w2145621.users.ecs.westminster.ac.uk/SDG%2014/Home%20Page/home_page" class="nav-link">Home</a></li>
+                    <li><a href="https://w2116487.users.ecs.westminster.ac.uk/action" class="nav-link">Action</a></li>
+                    <li><a href="https://w2136850.users.ecs.westminster.ac.uk/form" class="nav-link">Shop</a></li>
+                    <li><a href="https://w2172884.users.ecs.westminster.ac.uk/sitemap" class="nav-link">Sitemap</a></li>
+                    <li><a href="https://w2116487.users.ecs.westminster.ac.uk/quiz.cs" class="nav-link">Quiz</a></li>
+                    <li><a href="https://w2172884.users.ecs.westminster.ac.uk/gallery" class="nav-link">Gallery</a></li>                    
+                    <li><a href="https://w2145621.users.ecs.westminster.ac.uk/SDG%2014/Timeline%20Page" class="nav-link active">Timeline</a></li>
+                    <li><a href="https://w2116487.users.ecs.westminster.ac.uk/student.cs" class="nav-link">Student Details</a></li>
+                    <li><a href="https://w2141045.users.ecs.westminster.ac.uk/query_form.html" class="nav-link">Query</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <main class="container">
+
+
+        <div class="filters">
+            <button class="filterButton" data-filter="all">show All</button>
+            <button class="filterButton" data-filter="waterProtest"> Water Protests</button>
+            <button class="filterButton" data-filter="chemicalProtest"> Chemical Protests</button>
+            <button class="filterButton" data-filter="habitatProtest"> habitat Protests</button>
+            <button class="filterButton" data-filter="CarbonProtest"> carbon Protests</button>
+          
+          </div>
+          
+          <p class="noEvents">There were no events that matched your description</p>
+          
+          <div class="Card2" data-category="waterProtest">
+          
+           <div class="cardLeft">
+          
+           <img src="Save our water protest.jpeg" class="milestoneImages" alt="save our waters protest image">
+          
+          
+           <h1>SAVE OUR RIVERS</h1>
+          
+           <span class="icons">
+          
+             <img src="calendar.png" class="iconImage">
+             <p>22 Jan 2026</p> 
+          
+           </span>
+          
+            <span class="icons">
+          
+              <img src="location.png" class="iconImage">
+              <p>Baker Street, London</p> 
+           
+            </span>
+          
+            <span class="icons">
+          
+              <img src="clock.png" class="iconImage">
+              <p>18:00 - 23:00</p> 
+           
+            </span>
+          
+            <button class="moreButton">View Event</button>
+          
+              </div>
+          
+              
+              <div class="EventInfo">
+               <ul>
+          
+          
+          
+          
+                  <li> Oceans, seas and coastal areas form an integrated and essential component of the Earth’s ecosystem and are critical to sustainable development. They cover more than two-thirds of the earth’s 
+                      surface and contain 97% of the planet’s water. </li> <br>
+          
+                      <li>In addition, oceans are crucial for global food security and human health.</li> <br>
+                      <li>oceans host huge reservoirs of biodiversity</li><br>
+          
+          
+          
+          
+          
+          
+                  <li>Oceans contribute to poverty eradication by creating sustainable livelihoods and decent work. </li> <br>
+                  <li>They are also the primary regulator of the global climate, an important sink for greenhouse gases and they provide us with water and the oxygen we breathe</li>
+          
+                  <li><a href="https://sdgs.un.org/topics/oceans-and-seas" target="_blank">Source</a></li>
+          
+                  
+              </ul>
+          
+              </div>
+          
+              
+          </div>
+          
+          
+          <div class="Card2" id="card2" data-category="waterProtest">
+          
+              <div class="cardLeft">
+             
+              <img src="Beach pollution.jpg" class="milestoneImages" alt="Beach pollution image">
+             
+             
+              <h1>END BEACH POLLUTION</h1>
+             
+              <span class="icons">
+             
+                <img src="calendar.png" class="iconImage">
+                <p>29 Jan 2026</p> 
+             
+              </span>
+             
+               <span class="icons">
+             
+                 <img src="location.png" class="iconImage">
+                 <p>Great Portland Street, London</p> 
+              
+               </span>
+             
+               <span class="icons">
+             
+                 <img src="clock.png" class="iconImage">
+                 <p>16:00 - 20:00</p> 
+              
+               </span>
+             
+               <button class="moreButton">View Event</button>
+             
+                 </div>
+             
+                 
+                 <div class="EventInfo">
+                  <ul>
+             
+             
+             
+             
+                     <li> Human activities on land are the biggest sources of marine pollution—an estimated 19-23 million tonnes of plastic waste enter the world’s oceans each year. </li> <br>
+             
+                         <li>Floods and other storm-related events flush this waste into the sea, where it sinks or is carried away by currents.
+                          The major sea-based sources of marine pollution include discarded fishing gear, shipping activities, and legal and illegal dumping</li> <br>
+                         <li>All of this pollution causes serious economic losses. Coastal communities face increased expenditures on beach cleaning, public health and waste disposal.</li><br>
+             
+             
+             
+             
+             
+             
+                     <li>Discarded fishing gear can entangle and kill marine life and smother wildlife habitats</li> <br>
+                     <li>Pesticides and other toxins adhere to tiny particles of discarded plastics (microplastics), which can be accidentally ingested by small aquatic life</li> <br>
+
+                      <a href="https://www.unep.org/beatpollution/forms-pollution/freshwater" target="_blank">Source</a>
+             
+             
+             
+             
+             
+                     
+                 </ul>
+             
+                 </div>
+             
+                 
+             </div>
+          
+          
+          <div class="Card2" id="card3" data-category="chemicalProtest">
+          
+           <div class="cardLeft">
+          
+           <img src="chemical dumping.jpg" class="milestoneImages" alt="stop chemical dumping image">
+          
+          
+           <h1>STOP CHEMICAL DUMPING </h1>
+          
+           <span class="icons">
+          
+             <img src="file:///C:/Users/abdul/Downloads/SDG%2014/calendar.png" class="iconImage">
+             <p>15 March 2026</p> 
+          
+           </span>
+          
+            <span class="icons">
+          
+              <img src="file:///C:/Users/abdul/Downloads/SDG%2014/location.png" class="iconImage">
+              <p>Oxford Street, London</p> 
+           
+            </span>
+          
+            <span class="icons">
+          
+              <img src="file:///C:/Users/abdul/Downloads/SDG%2014/clock.png" class="iconImage">
+              <p>14:00 - 18:00</p> 
+           
+            </span>
+          
+            <button class="moreButton">View Event</button>
+          
+              </div>
+          
+              
+              <div class="EventInfo">
+               <ul>
+          
+          
+          
+          
+                  <li> Humans use over 100,000 different chemical elements and compounds, including lead, mercury, cadmium and persistent organic pollutants. </li> <br>
+          
+                      <li>Global chemical sales are projected to almost double from 2017 to 2030. If not managed properly, chemicals can have severe impacts on human health, causing acute poisoning, cancers, birth defects, neurological disorders, hormone disruption and other grave illnesses.</li> <br>
+                      <li>The burden of disease from selected chemicals was estimated at 1.6 million lives and 44.8 million disability-adjusted life years (DALYs) in 2016.</li><br>
+          
+          
+          
+          
+          
+          
+                  <li>One in 3 children have dangerously high blood lead levels, which has been linked to lower intelligence quotient scores and behavioural problems. </li> <br>
+
+                  <li>It also provides the secretariat for the Global Framework on Chemicals, a milestone international agreement adopted in September 2023 for the safe and sustainable management of chemicals and waste.</li>
+          
+                      
+                  <li><a href="https://www.unep.org/beatpollution/forms-pollution/chemical" target="_blank">Source</a></li>
+          
+          
+                  
+              </ul>
+          
+              </div>
+          
+              
+          </div>
+          
+          
+          <div class="Card2" id="card4" data-category="habitatProtest">
+          
+              <div class="cardLeft">
+             
+              <img src="habitat loss.jpeg" class="milestoneImages" alt="stop habitat loss protest image">
+             
+             
+              <h1>STOP HABITAT LOSS</h1>
+             
+              <span class="icons">
+             
+                <img src="calendar.png" class="iconImage">
+                <p>7 February 2026</p> 
+             
+              </span>
+             
+               <span class="icons">
+             
+                 <img src="location.png" class="iconImage">
+                 <p>Carnaby Street, London</p> 
+              
+               </span>
+             
+               <span class="icons">
+             
+                 <img src="clock.png" class="iconImage">
+                 <p>18:00 - 23:00</p> 
+              
+               </span>
+             
+               <button class="moreButton">View Event</button>
+             
+                 </div>
+             
+                 
+                 <div class="EventInfo">
+                  <ul>
+             
+             
+             
+             
+                     <li> Environment Agency (EA) data from the past four years shows an alarming rise in the number of fish deaths linked to sewage pollution,
+                       with figures escalating from 26,690 in 2020-2021 to a staggering 116,135 in 2023-2024, a 176% increase on the previous year.</li> <br>
+             
+
+             
+             
+             
+             
+             
+             
+                     <li>Previous studies by Fish Legal have shown that fish kill investigation reports are not provided for over 50% of incidents.</li> <br>
+                     <li>“We can’t let these mass fish killings continue. This unprecedented increase in fish kills caused by sewage pollution is a clear indicator of the deteriorating health of our waterways.</li> <br>
+                     
+             
+             
+                     <li><a href="https://anglingtrust.net/2024/05/20/huge-increase-in-fish-kills-linked-to-sewage-pollution/">Source</a></li>
+             
+             
+             
+                     
+                 </ul>
+             
+                 </div>
+             
+                 
+             </div>
+          
+          
+          
+          
+          <div class="Card2" id="card5" data-category="chemicalProtest">
+          
+              <div class="cardLeft">
+             
+              <img src="ocean acidification.jpeg" class="milestoneImages" alt="stop acidification protest image">
+             
+             
+              <h1>STOP OCEAN ACIDIFICATION</h1>
+             
+              <span class="icons">
+             
+                <img src="calendar.png" class="iconImage">
+                <p>28 Feb 2026</p> 
+             
+              </span>
+             
+               <span class="icons">
+             
+                 <img src="location.png" class="iconImage">
+                 <p> Aldersgate Street, London</p> 
+              
+               </span>
+             
+               <span class="icons">
+             
+                 <img src="clock.png" class="iconImage">
+                 <p>11:00 - 19:00</p> 
+              
+               </span>
+             
+               <button class="moreButton">View Event</button>
+             
+                 </div>
+             
+                 
+                 <div class="EventInfo">
+                  <ul>
+             
+             
+             
+             
+                     <li> Oceans, seas and coastal areas form an integrated and essential component of the Earth’s ecosystem and are critical to sustainable development. They cover more than two-thirds of the earth’s 
+                         surface and contain 97% of the planet’s water. </li> <br>
+             
+                         <li>In addition, oceans are crucial for global food security and human health.</li> <br>
+                         <li>oceans host huge reservoirs of biodiversity</li><br>
+             
+             
+             
+             
+             
+             
+                     <li>Oceans contribute to poverty eradication by creating sustainable livelihoods and decent work. </li> <br>
+                     <li>Over three billion people depend on marine and coastal resources for their livelihoods.</li> <br>
+                     
+             
+                      <li><a href="https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-acidification" target="_blank">Source</a></li>
+             
+                     
+                 </ul>
+             
+                 </div>
+             
+                 
+             </div>
+          
+          
+          
+          <div class="Card2" id="card6" data-category="habitatProtest">
+          
+              <div class="cardLeft">
+             
+              <img src="stop overfishing.jpeg" class="milestoneImages" alt="stop overfishing protest image">
+             
+             
+              <h1>STOP OVERFISHING</h1>
+             
+              <span class="icons">
+             
+                <img src="calendar.png" class="iconImage">
+                <p>22 May 2026</p> 
+             
+              </span>
+             
+               <span class="icons">
+             
+                 <img src="location.png" class="iconImage">
+                 <p>Portobello Road, London</p> 
+              
+               </span>
+             
+               <span class="icons">
+             
+                 <img src="clock.png" class="iconImage">
+                 <p>12:00 - 18:00</p> 
+              
+               </span>
+             
+               <button class="moreButton">View Event</button>
+             
+                 </div>
+             
+                 
+                 <div class="EventInfo">
+                  <ul>
+             
+             
+             
+             
+                     <li> Some 4 million fishing vessels of all sizes now ply the oceans, many with increasing capacity and efficiencies to catch more fish. </li> <br>
+             
+                         <li>Systemic overfishing is only made worse by illegal catches and trade. In fact, some of the worst ocean impacts are caused by pervasive illegal fishing, which is estimated at up to 30% of catch or more for high-value species.</li> <br>
+                         <li>Experts estimate illegal, unreported, and unregulated (IUU) fishing nets criminals up to $36.4 billion each year. </li><br>
+             
+             
+             
+             
+             
+             
+                     <li>Subsidies, or support provided to the fishing industry to offset the costs of doing business, are another key driver of overfishing</li> <br>
+                     <li>Subsidies can lead to overcapacity of fishing vessels and skewing of production costs so that fishing operations continue when they would otherwise not make economic sense.</li> <br>
+
+                     <li><a href="https://www.worldwildlife.org/our-work/oceans/sustainable-seafood/wild-caught-seafood/overfishing/" target="_blank">Source</a></li>
+             
+             
+             
+             
+             
+                     
+                 </ul>
+             
+                 </div>
+             
+                 
+             </div>
+          
+          
+          <div class="Card2" id="card7" data-category="habitatProtest">
+          
+              <div class="cardLeft">
+             
+              <img src="marine conservation.jpeg" class="milestoneImages" alt="marine conservation protest image">
+             
+             
+              <h1>MARINE CONSERVATION</h1>
+             
+              <span class="icons">
+             
+                <img src="calendar.png" class="iconImage">
+                <p>12 June 2026</p> 
+             
+              </span>
+             
+               <span class="icons">
+             
+                 <img src="location.png" class="iconImage">
+                 <p>Cannon Street, London</p> 
+              
+               </span>
+             
+               <span class="icons">
+             
+                 <img src="clock.png" class="iconImage">
+                 <p>10:00 - 18:00</p> 
+              
+               </span>
+             
+               <button class="moreButton">View Event</button>
+             
+                 </div>
+             
+                 
+                 <div class="EventInfo">
+                  <ul>
+             
+             
+             
+             
+                     <li> Plastic pollution is one of the greatest challenges our ocean is facing right now. Not only does it make our beaches look dirty, but it is affecting marine animals, birds, sea plants and is even having a detrimental effect on our health too.</li> <br>
+             
+                         <li>By tackling plastic pollution, both in the short and long term, we can ensure a cleaner, healthier ocean for all.</li> <br>
+                         <li> Smoking products which are designed to be disposed of such as cigarette butts and disposable vapes are also becoming a major cause of plastic pollution too.</li><br>
+             
+             
+             
+             
+             
+             
+                     
+                     <li>It’s estimated that 35% of primary microplastics come from domestic and industrial washing cycles.</li> <br>
+                     <li>We’re working on reducing microfibres entering the oceans via washing machines. Launched in 2021, Grundig produced the world’s first domestic washing machine with a factory fitted filter.</li>
+          
+                     <li><a href="https://www.mcsuk.org/ocean-emergency/ocean-pollution/plastics/microplastics/">Source</a></li>
+             
+             
+             
+             
+                     
+                 </ul>
+             
+                 </div>
+             
+                 
+             </div>
+          
+          <div class="Card2" id="card8" data-category="CarbonProtest">
+          
+              <div class="cardLeft">
+             
+              <img src="blue carbon.jpg" class="milestoneImages" alt="blue carbon image">
+             
+             
+              <h1>Increase Blue Carbon</h1>
+             
+              <span class="icons">
+             
+                <img src="calendar.png" class="iconImage">
+                <p>22 June 2026</p> 
+             
+              </span>
+             
+               <span class="icons">
+             
+                 <img src="location.png" class="iconImage">
+                 <p>Baker Street, London</p> 
+              
+               </span>
+             
+               <span class="icons">
+             
+                 <img src="clock.png" class="iconImage">
+                 <p>18:00 - 23:00</p> 
+              
+               </span>
+             
+               <button class="moreButton">View Event</button>
+             
+                 </div>
+             
+                 
+                 <div class="EventInfo">
+                  <ul>
+             
+             
+             
+             
+                     <li>Marine ecosystems like seagrass meadows, saltmarshes and mangroves absorb or ‘draw down’ carbon dioxide from the water and atmosphere, just like plants and trees on land. </li> <br>
+             
+                      <li>The storage of carbon in marine habitats is called blue carbon.</li> <br>
+                      <li> The storage of blue carbon can be in the plants themselves, like seaweed and seagrass; in the seafloor sediment where plants are rooted; or even in the animals which live in the water, including seabirds, fish and larger mammals.</li><br>
+             
+             
+             
+             
+             
+             
+                    
+                     <li>As part of the UK’s commitment to the Paris Climate Agreement, and to keeping global temperature rises to below 1.5˚ C, the UK Government announced its aim in 2020, to cut carbon emissions by 68% compared with 1990 levels over the next decade, with a legislated commitment to meet net zero greenhouse gas emissions by 2050 (and 2045 in Scotland).</li> <br>
+                     <li>Globally, saltmarshes and seagrass – blue carbon sinks – draw down and store between them 235-450 million tonnes of carbon a year; almost half the emissions from the entire global transport sector.</li>
+             
+             
+                      <li><a href="https://www.mcsuk.org/ocean-emergency/climate-change/blue-carbon/" target="_blank">Source</a></li>
+             
+             
+                     
+                 </ul>
+             
+                 </div>
+             
+                 
+             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Protecting Life Below Water</h2>
+        <p>The ocean drives global systems that make the Earth habitable for humankind. Our rainwater, drinking water, weather, climate, coastlines, much of our food, and even the oxygen in the air we breathe, are all ultimately provided and regulated by the sea.</p>
+        
+        <div style="margin-top: 30px;">
+            <a href="https://w2136850.users.ecs.westminster.ac.uk/form" class="nav-link">Support Our Cause</a>
+            <a href="https://w2141045.users.ecs.westminster.ac.uk/query_form.html" class="nav-link">Ask a Question</a>
+        </div>
+    </main>
+
+    <footer>
+      
+        <p>&copy; 2025 SDG 14 Team. All Rights Reserved.</p>
+        <p>Editor Page:
+          <a href="https://w2145621.users.ecs.westminster.ac.uk/SDG%2014/Page%20Editor%202.html">Student 5 (Timeline)</a>
+        </p>
+        <p><small>Compliance: This site follows WCAG accessibility guidelines for color contrast and screen readers.</small></p>
+        
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    
+    
+        // this block of code changed controls the view event button and toggles when the button is clicked to show contents
+    
+        const Buttons = document.querySelectorAll('.moreButton')
+    
+        Buttons.forEach(button =>{
+    
+            button.addEventListener('click', () =>{
+                const closestButton = button.closest('.Card2');
+    
+                if (closestButton){
+                closestButton.classList.toggle('Card2View');
+                }
+    
+                closestButton.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+    
+                });
+    
+    
+    
+    
+            });
+        });
+    
+        // this block of code checks if the filter is 'all' or the selected filter value
+            
+        function filterEvents(filterValue) {
+    
+        const allCards = document.querySelectorAll('.Card2');
+        const noEvents = document.querySelector('.noEvents');
+        let eventsFound = 0;
+    
+        allCards.forEach(card =>{
+            const Category = card.getAttribute('data-category')
+    
+            if (filterValue ==='all' || Category ===filterValue){
+            card.classList.remove('hidden');
+            eventsFound ++;
+            
+            } else {
+                card.classList.add('hidden');
+            // this hides the card
+    
+    
+            }
+    
+        });
+    
+        // this block checks if any events were found 
+    
+        if (eventsFound == '0'){
+            noEvents.style.display = 'block';
+        
+        } else {
+            noEvents.style.display = 'none';
+        }
+        }
+    
+    
+    
+    
+    
+        //this lines gets the data from the data filter attribute
+    
+        const filterButton = document.querySelectorAll('.filterButton');
+    
+        filterButton.forEach(button =>{
+    
+        button.addEventListener('click', (event) => {
+            const filter  = event.currentTarget.getAttribute('data-filter');
+    
+    
+            // this line of code calls the filter user defined function now renamed in the filter line above
+            filterEvents(filter);
+    
+        });
+    
+        });
+    
+        // this line of code makes it so that if when the website loads it'll show all events at first
+        filterEvents('all');
+    
+    });
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
